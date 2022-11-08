@@ -19,46 +19,46 @@ const SignupSection = () => {
     })
 
     return (
-        <div className='w-full min-h-full bg-black bg-opacity-70 xl:px-80 flex flex-col gap-24 xl:py-32'>
+        <div className='w-full min-h-full bg-black bg-opacity-70 xl:px-80 flex flex-col lg:gap-24 gap-14 xl:py-32 md:px-36 px-5 py-14'>
             <p className='w-full text-56 leading-68 font-bold text-white xl:px-32 text-center'>
                 Register for a free business review and consultation
             </p>
-            <div className='w-full flex flex-col justify-start items-center gap-12 font-inter px-5'>
-                <div className='w-full flex justify-between items-center gap-8'>
+            <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-6 font-inter lg:px-5'>
+                <div className='w-full flex lg:flex-row flex-col justify-between items-center gap-8'>
                     <Input
                         type='text'
                         name='name'
                         placeholder='Your Name'
-                        className='w-3/12'
+                        className='lg:w-3/12 w-full'
                     />
                     <Input
                         type='email'
                         name='email'
                         placeholder='Email'
-                        className='w-9/12'
+                        className='lg:w-9/12 w-full'
                     />
                 </div>
-                <div className='w-full flex justify-between items-center gap-8'>
+                <div className='w-full flex flex-col lg:flex-row justify-between items-center gap-8'>
                     <Input
                         type='text'
                         name='company'
                         placeholder='Company Name'
-                        className='w-4/12'
+                        className='lg:w-4/12 w-full'
                     />
                     <Input
                         type='text'
                         name='website'
                         placeholder='Company Website'
-                        className='w-4/12'
+                        className='lg:w-4/12 w-full'
                     />
                     <Input
                         type='text'
                         name='employees'
                         placeholder='Number of Employees'
-                        className='w-4/12'
+                        className='lg:w-4/12 w-full'
                     />
                 </div>
-                <div className='w-full flex justify-start items-center gap-14'>
+                <div className='w-full flex lg:flex-row flex-col justify-start lg:items-center items-start lg:gap-14 gap-10'>
                     <RadioInput
                         title='Are you generating revenue'
                         validation={values.isRevenue}
@@ -107,7 +107,7 @@ const SignupSection = () => {
                         </p>
                     </InputUpload>
                 </div>
-                <button className='w-full py-4 px-6 text-center bg-white rounded-lg font-bold text-18 leading-19 font-inter'>
+                <button className='w-full py-4 px-6 text-center bg-white rounded-lg font-bold text-18 leading-19 font-inter lg:mt-0 mt-6'>
                     Submit
                 </button>
             </div>

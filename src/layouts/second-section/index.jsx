@@ -23,11 +23,11 @@ const SecondSection = () => {
 
     return (
         <>
-            <div className='w-full flex justify-center items-center gap-52'>
+            <div className='w-full flex flex-col lg:flex-row justify-center items-center gap-52'>
                 {
                     secondSectionData.map((data, index) => {
                         return (
-                            <div className='w-1/3 flex flex-col justify-start items-center gap-8' key={index}>
+                            <div className='lg:w-1/3 w-full flex flex-col justify-start items-center gap-8' key={index}>
                                 <div className='w-full h-28 flex justify-center items-center'>
                                     <span className='text-72 leading-108 font-bold text-primary-100'>{data.id}</span>
                                 </div>
@@ -42,8 +42,8 @@ const SecondSection = () => {
                     })
                 }
             </div>
-            <div className='w-full flex justify-between items-center'>
-                <p className='xl:w-[700px] font-bold text-48 leading-58'>
+            <div className='w-full flex flex-col lg:flex-row justify-between items-center gap-8'>
+                <p className='xl:w-[700px] lg:w-auto w-full font-bold text-48 leading-58 text-center'>
                     Are you ready to secure investment for your business?
                 </p>
                 <button className='py-5 px-20 text-white flex justify-center items-center font-semibold text-18 leading-22 font-inter bg-black rounded-10 hover:shadow-lg'>

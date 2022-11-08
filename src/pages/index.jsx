@@ -19,15 +19,15 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen overflow-x-hidden">
-      <div className="w-full h-full bg-hero-bg bg-cover bg-no-repeat">
+      <div className="w-full h-full bg-hero-bg bg-cover bg-no-repeat bg-center">
         <div className="w-full relative h-full flex flex-col justify-center items-center bg-black bg-opacity-70 gap-3">
           <Hero onClick={_handleClick} />
         </div>
       </div>
-      <div className="w-full h-full flex flex-col justify-between items-center bg-white xl:p-32">
+      <div className="w-full min-h-screen lg:h-full flex flex-col justify-between items-center bg-white xl:p-32 px-5 py-14 gap-28 lg:gap-0 pb-28">
         <SecondSection />
       </div>
-      <div className="w-full min-h-full flex-flex-col justify-center items-center bg-register bg-cover bg-no-repeat" ref={ref}>
+      <div className="w-full min-h-full flex-flex-col justify-center items-center bg-register bg-cover md:bg-center bg-[30%_70%] bg-no-repeat xl:p-0" ref={ref}>
         <SignUpSection />
       </div>
       <div className="w-full flex flex-col justify-start items-center py-[72px] bg-black" ref={contacts}>

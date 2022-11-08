@@ -7,7 +7,7 @@ const Hero = ({ onClick }) => {
     return (
         <>
             <Navbar onClick={onClick} />
-            <p className="text-64 leading-78 text-center font-medium xl:px-56 text-white py-28">
+            <p className="xl:text-64 xl:leading-78 text-38 leading-40 text-center font-medium xl:px-56 p-5 text-white py-28">
                 We help innovative entrepreneurs raise money for start-ups
             </p>
             <div>
