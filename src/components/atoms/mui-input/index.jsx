@@ -1,6 +1,3 @@
-import styled from '@emotion/styled';
-import { Box, TextField } from '@mui/material'
-import { white } from '@mui/material'
 import React from 'react'
 
 const BaseInput = ({ type, name, placeholder, value, onChange, className, required = false }) => {
