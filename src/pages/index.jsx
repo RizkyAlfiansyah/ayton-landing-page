@@ -19,18 +19,18 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen overflow-x-hidden">
-      <div className="w-full h-full bg-hero-bg bg-cover bg-no-repeat bg-center">
-        <div className="w-full relative h-full flex flex-col justify-center items-center bg-black bg-opacity-70 gap-3">
+      <div className="w-full bg-hero-bg bg-cover bg-no-repeat bg-center">
+        <div className="w-full relative flex flex-col justify-center items-center bg-black bg-opacity-70 gap-3 lg:px-234 lg:py-338 py-268 px-5">
           <Hero onClick={_handleClick} />
         </div>
       </div>
-      <div className="w-full min-h-screen lg:h-full flex flex-col justify-between items-center bg-white xl:p-32 px-5 py-14 gap-28 lg:gap-0 pb-28">
+      <div className="w-full min-h-screen flex flex-col justify-between items-center bg-white lg:p-32 lg:pb-[71px] px-5 py-14 gap-24 lg:gap-32">
         <SecondSection />
       </div>
-      <div className="w-full min-h-full flex-flex-col justify-center items-center bg-register bg-cover md:bg-center bg-[30%_70%] bg-no-repeat xl:p-0" ref={ref}>
+      <div className="w-full min-h-full flex-flex-col justify-center items-center bg-register bg-cover md:bg-center bg-[30%] bg-no-repeat xl:p-0" ref={ref}>
         <SignUpSection />
       </div>
-      <div className="w-full flex flex-col justify-start items-center py-[72px] bg-black" ref={contacts}>
+      <div className="w-full flex flex-col justify-start items-center lg:py-[72px] py-[50px] bg-black" ref={contacts}>
         <FooterSection />
       </div>
     </div>

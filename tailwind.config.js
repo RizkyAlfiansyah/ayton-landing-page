@@ -7,9 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      padding: {
+        234: "234px",
+        268: "268px",
+        338: "338px",
+      },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
-        source: ["Source Sans Pro", "sans-serif"],
+        source: ["Source Serif Pro", "serif"],
       },
       colors: {
         primary: {
@@ -23,9 +28,12 @@ module.exports = {
       fontSize: {
         16: "16px",
         18: "18px",
+        20: "20px",
         22: "22px",
+        24: "24px",
         32: "32px",
         38: "38px",
+        40: "40px",
         48: "48px",
         56: "56px",
         64: "64px",
@@ -37,11 +45,16 @@ module.exports = {
         26: "26px",
         27: "27px",
         32: "32px",
+        38: "38px",
         40: "40px",
+        48: "48px",
         58: "58px",
         68: "68px",
         78: "78px",
         108: "108px",
+      },
+      letterSpacing: {
+        19: "6px",
       },
       borderWidth: {
         1: "1px",
@@ -58,6 +71,9 @@ module.exports = {
       backgroundImage: {
         "hero-bg": 'url("/bg-hero.png")',
         register: 'url("/bg-register.png")',
+      },
+      transition: {
+        fade: "all 0.2s ease",
       },
     },
   },

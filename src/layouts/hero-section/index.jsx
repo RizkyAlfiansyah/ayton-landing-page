@@ -7,12 +7,9 @@ const Hero = ({ onClick }) => {
     return (
         <>
             <Navbar onClick={onClick} />
-            <p className="xl:text-64 xl:leading-78 text-38 leading-40 text-center font-medium xl:px-56 p-5 text-white py-28">
-                We help innovative entrepreneurs raise money for start-ups
+            <p className="xl:text-64 xl:leading-78 text-38 leading-40 text-center font-medium p-5 lg:p-0 text-white">
+                We focus on fundraising so you can focus on building your business
             </p>
-            <div>
-                <Image src={LogoPNG} alt="logo" />
-            </div>
         </>
     )
 }

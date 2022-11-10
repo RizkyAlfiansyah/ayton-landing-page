@@ -1,4 +1,5 @@
-import { Input, InputUpload } from 'components/atoms'
+import { InputBase } from '@mui/material'
+import { BaseInput, Input, InputUpload } from 'components/atoms'
 import { RadioInput } from 'components/molecules'
 import React, { useState } from 'react'
 
@@ -19,78 +20,79 @@ const SignupSection = () => {
     })
 
     return (
-        <div className='w-full min-h-full bg-black bg-opacity-70 xl:px-80 flex flex-col lg:gap-24 gap-14 xl:py-32 md:px-36 px-5 py-14'>
-            <p className='w-full text-56 leading-68 font-bold text-white xl:px-32 text-center'>
+        <div className='w-full min-h-full bg-black bg-opacity-70 xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 px-5 py-14'>
+            <p className='w-full lg:text-56 lg:leading-68 text-40 leading-48 font-bold text-white xl:px-32 text-center'>
                 Register for a free business review and consultation
             </p>
-            <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-6 font-inter lg:px-5'>
+            <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-10 font-inter lg:px-5'>
                 <div className='w-full flex lg:flex-row flex-col justify-between items-center gap-8'>
-                    <Input
+                    <BaseInput
                         type='text'
                         name='name'
-                        placeholder='Your Name'
+                        placeholder='Your Full Name'
                         className='lg:w-3/12 w-full'
+                        required
                     />
-                    <Input
+                    <BaseInput
                         type='email'
                         name='email'
                         placeholder='Email'
                         className='lg:w-9/12 w-full'
+                        required
                     />
                 </div>
                 <div className='w-full flex flex-col lg:flex-row justify-between items-center gap-8'>
-                    <Input
+                    <BaseInput
                         type='text'
                         name='company'
                         placeholder='Company Name'
                         className='lg:w-4/12 w-full'
+                        required
                     />
-                    <Input
+                    <BaseInput
                         type='text'
                         name='website'
                         placeholder='Company Website'
                         className='lg:w-4/12 w-full'
+                        required
                     />
-                    <Input
+                    <BaseInput
                         type='text'
                         name='employees'
-                        placeholder='Number of Employees'
+                        placeholder='Number of team members'
                         className='lg:w-4/12 w-full'
+                        required
                     />
                 </div>
                 <div className='w-full flex lg:flex-row flex-col justify-start lg:items-center items-start lg:gap-14 gap-10'>
                     <RadioInput
-                        title='Are you generating revenue'
+                        title='Is your business generating revenue'
                         validation={values.isRevenue}
                         onClickYes={() => setValues({ ...values, isRevenue: true })}
                         onClickNo={() => setValues({ ...values, isRevenue: false })}
                     />
                     <RadioInput
-                        title='Are you profitable'
+                        title='Is your business profitable'
                         validation={values.isProfitable}
                         onClickYes={() => setValues({ ...values, isProfitable: true })}
                         onClickNo={() => setValues({ ...values, isProfitable: false })}
                     />
                 </div>
-                <Input
+                <BaseInput
                     type='number'
                     name='capital'
                     placeholder='How much capital are you looking to raise'
                     className='w-full'
+                    required
                 />
-                <Input
-                    type='number'
-                    name='funds'
-                    placeholder='Use of funds '
-                    className='w-full'
-                />
-                <Input
+                <BaseInput
                     type='text'
                     name='description'
-                    placeholder='Describe your business, how do you make money'
-                    className='w-full'
+                    placeholder='Briefly describe your business, how do you make money'
+                    className='w-full md:py-0 py-6'
+                    required
                 />
-                <div className='w-full flex flex-col justify-start items-start gap-4 mt-4'>
+                <div className='w-full flex flex-col justify-start items-start gap-4 lg:mt-4'>
                     <p className='font-normal text-16 leading-19 text-white'>
                         Upload your company presentation <span className='text-white text-opacity-60'>(.pdf.docx.ppt)</span>
                     </p>

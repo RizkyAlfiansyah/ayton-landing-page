@@ -13,7 +13,7 @@ const Navbar = ({ onClick }) => {
 
     return (
         <>
-            <div className="hidden lg:flex w-full absolute top-0 justify-between items-center py-10 px-32 bg-transparent">
+            <div className="hidden lg:flex w-full absolute top-0 justify-between items-center py-10 px-24 xl:px-32 bg-transparent">
                 <div>
                     <Image src={LogoPNG} alt="logo" />
                 </div>

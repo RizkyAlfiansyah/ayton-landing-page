@@ -17,4 +17,33 @@
   input[type="number"] {
     -moz-appearance: textfield;
   }
+
+  .floating-label-group {
+    position: relative;
+    width: 100%;
+  }
+  .floating-label-group .floating-label {
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    pointer-events: none;
+    top: 12px;
+    left: 0px;
+    transition: all 0.1s ease;
+  }
+
+  .floating-label-group input:focus ~ .floating-label,
+  input:not(:focus):valid ~ .floating-label {
+    top: -15px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 60%;
+    color: #fff;
+  }
+
+  .row {
+    margin-top: 50px;
+  }
 }
