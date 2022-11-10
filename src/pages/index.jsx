@@ -24,7 +24,7 @@ export default function Home() {
           <Hero onClick={_handleClick} />
         </div>
       </div>
-      <div className="w-full min-h-screen flex flex-col justify-between items-center bg-white lg:p-32 lg:pb-[71px] px-5 py-14 gap-24 lg:gap-32">
+      <div className="w-full min-h-screen flex flex-col justify-between items-center bg-white xl:p-32 lg:p-24 lg:pb-[71px] px-5 py-14 gap-24 lg:gap-32">
         <SecondSection />
       </div>
       <div className="w-full min-h-full flex-flex-col justify-center items-center bg-register bg-cover md:bg-center bg-[30%] bg-no-repeat xl:p-0" ref={ref}>

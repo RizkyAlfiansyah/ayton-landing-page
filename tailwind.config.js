@@ -19,13 +19,19 @@ module.exports = {
       colors: {
         primary: {
           100: "#7B7B7B",
+          150: "#2C2C2C",
+          180: "#2F2C2C",
           200: "#10B598",
           300: "#F3F3FF",
           400: "#f9f9f8",
           500: "#D9D9D9",
         },
+        red: {
+          500: "#FF0A0A",
+        },
       },
       fontSize: {
+        12: "12px",
         16: "16px",
         18: "18px",
         20: "20px",

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import IconPNG from "assets/icons/icon.png"
 import LogoPNG from "assets/icons/logo.png"
+import CloseSVG from "assets/icons/icon-close.svg"
 import Image from 'next/image'
 
 const Navbar = ({ onClick }) => {
+    const [collapse, setCollapse] = useState(false)
 
     const navbarLinks = [
         "Home",
@@ -33,23 +35,39 @@ const Navbar = ({ onClick }) => {
                 <div>
                     <Image src={IconPNG} alt="logo-sm" />
                 </div>
-                <div className='flex flex-col justify-center items-center p-[2px] gap-[6px]'>
+                <div className='flex flex-col justify-center items-center p-[2px] gap-[6px]' onClick={() => setCollapse(true)}>
                     <div className='w-6 h-[2px] bg-white rounded-lg' />
                     <div className='w-6 h-[2px] bg-white rounded-lg' />
                     <div className='w-6 h-[2px] bg-white rounded-lg' />
                 </div>
-                {/* <ul className="flex justify-start items-center gap-14">
-                {
-                    navbarLinks.map((link, index) => {
-                        return (
-                            <li key={index} className="text-22 leading-27 text-white font-normal cursor-pointer rounded-xl" onClick={() => onClick(link)}>
-                                {link}
-                            </li>
-                        )
-                    })
-                }
-            </ul> */}
             </div>
+            {
+                collapse && (
+                    <div
+                        className={`lg:hidden w-full absolute top-0 flex flex-col justify-start bg-primary-150`}>
+                        <div className='w-full flex justify-between p-5'>
+                            <div>
+                                <Image src={IconPNG} alt="logo" />
+                            </div>
+                            <span className='font-bold text-white' onClick={() => setCollapse(false)}>
+                                <Image src={CloseSVG} alt="close" />
+                            </span>
+                        </div>
+                        <ul className="flex flex-col justify-start items-center">
+                            {
+                                navbarLinks.map((link, index) => {
+                                    return (
+                                        <li key={index}
+                                            className="w-full text-22 leading-27 text-white font-normal cursor-pointer border-b-1 border-black px-5 py-3" onClick={() => onClick(link)}>
+                                            {link}
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                )
+            }
         </>
     )
 }
