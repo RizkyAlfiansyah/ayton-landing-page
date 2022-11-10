@@ -1,4 +1,3 @@
-import { InputBase } from '@mui/material'
 import { BaseInput, Input, InputUpload } from 'components/atoms'
 import { RadioInput } from 'components/molecules'
 import React, { useState } from 'react'
