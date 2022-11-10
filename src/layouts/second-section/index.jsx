@@ -43,7 +43,7 @@ const SecondSection = () => {
             </div>
             <div className='w-full flex flex-col lg:flex-row justify-center items-center gap-8'>
                 <p className='xl:w-[700px] lg:w-auto w-full font-bold lg:text-48 lg:leading-58 text-32 leading-38 text-center'>
-                    Whether you're a first-time founder seeking seed capital or an established entrepreneur seeking growth capital we're here to help
+                    {"Whether you're a first-time founder seeking seed capital or an established entrepreneur seeking growth capital we're here to help"}
                 </p>
             </div>
         </>
