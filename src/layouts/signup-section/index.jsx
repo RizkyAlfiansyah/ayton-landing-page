@@ -41,7 +41,7 @@ const SignupSection = () => {
         payload.append('is_profitable', values.is_profitable);
         payload.append('capital_raised', values.capital_raised);
         payload.append('business_description', values.business_description);
-        payload.append('file', values.file[0]);
+        payload.append('file', values.file[0] ? values.file[0] : "");
         setLoading(true);
 
         try {
