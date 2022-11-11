@@ -17,7 +17,7 @@ const InputUpload = (props) => {
                 name: files[i].name,
             });
         }
-        onChange(tempFile);
+        // onChange(tempFile);
     };
 
     return (
@@ -31,7 +31,7 @@ const InputUpload = (props) => {
                     name={id}
                     multiple={multiple}
                     accept={accept}
-                    onChange={(e) => fileUpload(e.target.files)}
+                    onChange={onChange}
                 />
                 {children}
             </label>

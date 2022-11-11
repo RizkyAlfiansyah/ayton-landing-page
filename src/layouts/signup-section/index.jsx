@@ -7,23 +7,58 @@ import LinkedInGraySVG from 'assets/icons/icon-linkedin-gray.svg'
 import FileSVG from 'assets/icons/file.png'
 import CloseGraySVG from 'assets/icons/icon-close-gray.svg'
 import Image from 'next/image'
+import { axiosApiInstance } from 'helpers/axios'
 
 const SignupSection = () => {
 
     const [isSuccess, setIsSuccess] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(false)
+    const [fileName, setFileName] = useState("")
 
     const [values, setValues] = useState({
-        name: '',
+        full_name: '',
         email: '',
         company_name: '',
         company_website: '',
         number_of_employees: '',
-        isRevenue: true,
-        isProfitable: true,
-        capital: '',
-        description: '',
-        files: []
+        is_generate_revenue: 1,
+        is_profitable: 1,
+        capital_raised: '',
+        business_description: '',
+        file: []
     })
+
+    const _handleSubmit = () => {
+        setError([]);
+        const payload = new FormData();
+        payload.append('full_name', values.full_name);
+        payload.append('email', values.email);
+        payload.append('company_name', values.company_name);
+        payload.append('company_website', values.company_website);
+        payload.append('number_of_employees', values.number_of_employees);
+        payload.append('is_generate_revenue', values.is_generate_revenue);
+        payload.append('is_profitable', values.is_profitable);
+        payload.append('capital_raised', values.capital_raised);
+        payload.append('business_description', values.business_description);
+        payload.append('file', values.file[0]);
+        setLoading(true);
+
+        try {
+            axiosApiInstance.post('/signups', payload)
+                .then((res) => {
+                    setLoading(false);
+                    setIsSuccess(true);
+                })
+                .catch((err) => {
+                    setError(err.response?.data?.message);
+                    setLoading(false);
+                });
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
+    };
 
     return (
         <div className='w-full min-h-full bg-black bg-opacity-70 xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 px-5 py-14'>
@@ -33,7 +68,7 @@ const SignupSection = () => {
             {
                 isSuccess ? (
                     <>
-                        <div className='w-full h-full flex flex-col justify-center items-center bg-white rounded-3xl lg:px-56 lg:py-16 lg:gap-10 gap-4 p-6 md:p-12'>
+                        <div className='w-full flex flex-col justify-center items-center bg-white rounded-3xl lg:px-56 lg:py-16 lg:gap-10 gap-4 p-6 md:p-12'>
                             <div>
                                 <Image
                                     src={SuccessSVG}
@@ -79,13 +114,19 @@ const SignupSection = () => {
                                 placeholder='Your Full Name'
                                 className='lg:w-3/12 w-full'
                                 required
+                                value={values.full_name}
+                                onChange={(e) => setValues({ ...values, full_name: e.target.value })}
+                                errorMessage={error?.full_name}
                             />
                             <BaseInput
-                                type='email'
+                                type='text'
                                 name='email'
                                 placeholder='Email'
                                 className='lg:w-9/12 w-full'
                                 required
+                                value={values.email}
+                                onChange={(e) => setValues({ ...values, email: e.target.value })}
+                                errorMessage={error?.email}
                             />
                         </div>
                         <div className='w-full flex flex-col lg:flex-row justify-between items-center gap-8'>
@@ -95,6 +136,9 @@ const SignupSection = () => {
                                 placeholder='Company Name'
                                 className='lg:w-4/12 w-full'
                                 required
+                                value={values.company_name}
+                                onChange={(e) => setValues({ ...values, company_name: e.target.value })}
+                                errorMessage={error?.company_name}
                             />
                             <BaseInput
                                 type='text'
@@ -102,57 +146,69 @@ const SignupSection = () => {
                                 placeholder='Company Website'
                                 className='lg:w-4/12 w-full'
                                 required
+                                value={values.company_website}
+                                onChange={(e) => setValues({ ...values, company_website: e.target.value })}
+                                errorMessage={error?.company_website}
                             />
                             <BaseInput
-                                type='text'
+                                type='number'
                                 name='employees'
                                 placeholder='Number of team members'
                                 className='lg:w-4/12 w-full'
                                 required
+                                value={values.number_of_employees}
+                                onChange={(e) => setValues({ ...values, number_of_employees: e.target.value })}
+                                errorMessage={error?.number_of_employees}
                             />
                         </div>
                         <div className='w-full flex lg:flex-row flex-col justify-start lg:items-center items-start lg:gap-14 gap-10'>
                             <RadioInput
                                 title='Is your business generating revenue'
-                                validation={values.isRevenue}
-                                onClickYes={() => setValues({ ...values, isRevenue: true })}
-                                onClickNo={() => setValues({ ...values, isRevenue: false })}
+                                validation={values.is_generate_revenue}
+                                onClickYes={() => setValues({ ...values, is_generate_revenue: 1 })}
+                                onClickNo={() => setValues({ ...values, is_generate_revenue: 0 })}
                             />
                             <RadioInput
                                 title='Is your business profitable'
-                                validation={values.isProfitable}
-                                onClickYes={() => setValues({ ...values, isProfitable: true })}
-                                onClickNo={() => setValues({ ...values, isProfitable: false })}
+                                validation={values.is_profitable}
+                                onClickYes={() => setValues({ ...values, is_profitable: 1 })}
+                                onClickNo={() => setValues({ ...values, is_profitable: 0 })}
                             />
                         </div>
                         <BaseInput
-                            type='number'
+                            type='text'
                             name='capital'
                             placeholder='How much capital are you looking to raise'
                             className='w-full'
                             required
+                            value={values.capital_raised}
+                            onChange={(e) => setValues({ ...values, capital_raised: e.target.value })}
+                            errorMessage={error?.capital_raised}
                         />
                         <BaseInput
                             type='text'
-                            name='description'
+                            name='business_description'
                             placeholder='Briefly describe your business, how do you make money'
                             className='w-full md:py-0 py-6'
                             required
+                            value={values.business_description}
+                            onChange={(e) => setValues({ ...values, business_description: e.target.value })}
+                            errorMessage={error?.business_description}
                         />
                         <div className='w-full flex flex-col justify-start items-start gap-4 lg:mt-4'>
                             <p className='font-normal text-16 leading-19 text-white'>
                                 Upload your company presentation <span className='text-white text-opacity-60'>(.pdf.docx.ppt)</span>
                             </p>
                             {
-                                values.files.length === 0 ? (
+                                values.file.length === 0 ? (
                                     <InputUpload
                                         onChange={
                                             (e) => {
-                                                console.log(e)
-                                                setValues({ ...values, files: e })
+                                                setValues({ ...values, file: e.target.files })
                                             }
                                         }
                                         id='file'
+                                        errorMessage={error?.file}
                                     >
                                         <p className='text-white'>
                                             + Upload File
@@ -167,14 +223,18 @@ const SignupSection = () => {
                                             />
                                         </div>
                                         <p className='text-white underline'>
-                                            {values.files[0].name}
+                                            {values.file[0].name}
                                         </p>
                                         <div
                                             className='cursor-pointer'
-                                            onClick={() => setValues({
-                                                ...values,
-                                                files: [],
-                                            })}>
+                                            onClick={() => {
+                                                setValues({
+                                                    ...values,
+                                                    file: [],
+                                                })
+                                                setFileName('')
+                                            }
+                                            }>
                                             <Image
                                                 src={CloseGraySVG}
                                                 alt='close'
@@ -183,9 +243,28 @@ const SignupSection = () => {
                                     </div>
                                 )
                             }
+                            {
+                                error?.file && (
+                                    <p className='w-full text-start text-red-500 text-12 leading-4 mt-1'>
+                                        {error?.file}
+                                    </p>
+                                )
+                            }
                         </div>
-                        <button className='w-full py-4 px-6 text-center bg-white rounded-lg font-bold text-18 leading-19 font-inter lg:mt-0 mt-6'>
-                            Submit
+                        <button className={`${loading && "disabled:bg-gray-300"} w-full py-4 px-6 text-center bg-white rounded-lg font-bold text-18 leading-19 font-inter lg:mt-0 mt-6`}
+                            onClick={_handleSubmit}
+                            disabled={loading}
+                        >
+                            {
+                                loading ? (
+                                    <div className='flex gap-2 justify-center items-center'>
+                                        <p>Submitting...</p>
+                                        <div className="border-t-transparent w-6 h-6 border-[3px] border-black border-solid rounded-full animate-spin"></div>
+                                    </div>
+                                ) : (
+                                    <p>Submit</p>
+                                )
+                            }
                         </button>
                     </div>
                 )

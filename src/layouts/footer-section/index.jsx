@@ -14,12 +14,12 @@ const FooterSection = () => {
                     alt='Partners'
                 />
             </div>
-            <div className='font-source font-semibold font-20 leading-26 tracking-19 flex flex-col gap-2 justify-start items-center'>
+            <div className='lg:hidden font-source font-semibold font-20 leading-26 tracking-19 flex flex-col gap-2 justify-start items-center'>
                 <p className='font-semibold'>AYTON</p>
                 <p className='font-light'>CAPITAL PARTNERS</p>
             </div>
             <div className='flex flex-col gap-2'>
-                <p className='w-[335px] text-opacity-70 text-center'>
+                <p className='w-[335px] text-white text-opacity-70 text-center'>
                     1 St Katherine’s Way, London, E1W 1 UN London, United Kingdom
                 </p>
                 <p className='w-[335px] text-center'>
