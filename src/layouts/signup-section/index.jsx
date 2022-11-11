@@ -61,7 +61,7 @@ const SignupSection = () => {
     };
 
     return (
-        <div className='w-full min-h-full bg-black bg-opacity-70 xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 px-5 py-14'>
+        <div className='w-full bg-black bg-opacity-70 xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 lg:px-28 px-5 py-14'>
             <p className='w-full lg:text-56 lg:leading-68 text-40 leading-48 font-bold text-white xl:px-32 text-center'>
                 Register for a free business review and consultation
             </p>
@@ -75,15 +75,15 @@ const SignupSection = () => {
                                     alt='success'
                                 />
                             </div>
-                            <div className='w-full flex-flex-col justify-start items-center'>
+                            <div className='w-full flex flex-col justify-start items-center gap-8'>
                                 <p className='w-full text-center font-bold text-32 leading-38'>
                                     Your submission has been succesfully processed
                                 </p>
                                 <p className='w-full text-center font-bold text-16 leading-19 text-primary-180'>
-                                    Your submission has been succesfully processed
+                                    We will contact you within 3-5 working days
                                 </p>
                             </div>
-                            <div className='w-full flex-flex-col justify-start items-center gap-3'>
+                            <div className='w-full flex flex-col justify-start items-center gap-3'>
                                 <p className='w-full text-center font-bold text-sm'>
                                     Info@aytonventures.com
                                 </p>
