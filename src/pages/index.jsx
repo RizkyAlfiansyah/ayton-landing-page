@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen overflow-x-hidden">
-      <div className="w-full bg-hero-bg bg-cover bg-no-repeat bg-center">
+      {/* <div className="w-full bg-hero-bg bg-cover bg-no-repeat bg-center">
         <div className="w-full relative flex flex-col justify-center items-center bg-black bg-opacity-70 gap-3 lg:px-234 lg:py-338 py-268 px-5">
           <Hero onClick={_handleClick} />
         </div>
@@ -32,7 +32,10 @@ export default function Home() {
       </div>
       <div className="w-full flex flex-col justify-start items-center lg:py-[72px] py-[50px] bg-black" ref={contacts}>
         <FooterSection />
-      </div>
+      </div> */}
+      <p className="text-center font-bold text-2xl">
+        Temporary Unavailable, Please come back later
+      </p>
     </div>
   );
 }
