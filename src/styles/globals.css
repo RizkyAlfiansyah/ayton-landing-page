@@ -24,7 +24,7 @@
   }
   .floating-label-group .floating-label {
     font-size: 16px;
-    color: #fff;
+    /* color: #fff; */
     position: absolute;
     pointer-events: none;
     top: 12px;
@@ -39,8 +39,8 @@
     left: 0px;
     font-size: 12px;
     line-height: 15px;
-    opacity: 60%;
-    color: #fff;
+    /* opacity: 60%; */
+    /* color: #fff; */
   }
 
   .row {

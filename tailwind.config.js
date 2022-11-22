@@ -25,6 +25,9 @@ module.exports = {
           300: "#F3F3FF",
           400: "#f9f9f8",
           500: "#D9D9D9",
+          600: "#FF9052",
+          700: "#DFDFDF",
+          800: "#F1F1F1",
         },
         red: {
           500: "#FF0A0A",
@@ -51,9 +54,11 @@ module.exports = {
         26: "26px",
         27: "27px",
         32: "32px",
+        36: "36px",
         38: "38px",
         40: "40px",
         48: "48px",
+        56: "56px",
         58: "58px",
         68: "68px",
         78: "78px",
@@ -70,6 +75,7 @@ module.exports = {
       },
       height: {
         80: "calc(100vh - 95px)",
+        474: "474px",
       },
       borderRadius: {
         10: "10px",

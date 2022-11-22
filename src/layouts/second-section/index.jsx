@@ -4,35 +4,34 @@ const SecondSection = () => {
 
     const secondSectionData = [
         {
-            id: "I",
-            title: "Want to raise money for your start-up?",
-            description: "Since 2017 we've raised over £5M in equity capital for UK based start-ups",
+            id: "£5M+ Raised",
+            description: "We’ve raised over £5M in equity capital for UK based start-ups",
         },
         {
-            id: "II",
-            title: "Fundraising is lengthy and time consuming",
-            description: "We are sector agnostic and focus on Pre-Seed to Series A financing rounds",
+            id: "Early Stage",
+            description: "We work on fundraises from Seed stage to Series A",
         },
         {
-            id: "III",
-            title: "Our experience will increase your chances of success",
-            description: "We work with you to run entire fundraising process which typically lasts 6-9 months",
+            id: "Sector Agnostic",
+            description: "We work with start-ups across all major industries",
+        },
+        {
+            id: "Sector Agnostic",
+            description: "We work with start-ups across all major industries",
         },
 
     ]
 
     return (
         <>
-            <div className='w-full flex flex-col lg:flex-row justify-center items-center gap-52'>
+            <div className='w-full flex flex-col lg:flex-row justify-start lg:items-start items-center gap-7'>
                 {
                     secondSectionData.map((data, index) => {
                         return (
-                            <div className='xl:w-1/3 lg:w-1/3 w-full flex flex-col justify-start items-center gap-8' key={index}>
-                                <div className='w-full h-28 flex justify-center items-center'>
-                                    <span className='text-72 leading-108 font-bold text-primary-100'>{data.id}</span>
-                                </div>
+                            <div className='lg:w-full w-8/12 flex flex-col justify-start items-center gap-8' key={index}>
+                                <p className='w-full text-40 leading-56 font-bold text-primary-600 text-center'>{data.id}</p>
                                 <div className='w-full h-full xl:px-8 flex flex-col justify-start items-center gap-10'>
-                                    <p className='md:w-5/12 lg:w-auto text-24 leading-38 font-normal text-center text-primary-100'>
+                                    <p className='md:w-5/12 lg:w-auto text-20 leading-36 font-normal text-center text-primary-100'>
                                         {data.description}
                                     </p>
                                 </div>
@@ -40,11 +39,6 @@ const SecondSection = () => {
                         )
                     })
                 }
-            </div>
-            <div className='w-full flex flex-col lg:flex-row justify-center items-center gap-8'>
-                <p className='w-full font-bold lg:text-48 lg:leading-58 text-32 leading-38 text-center lg:px-24'>
-                    {"Whether you're a first-time founder seeking seed capital or an established entrepreneur seeking growth capital we're here to help"}
-                </p>
             </div>
         </>
     )

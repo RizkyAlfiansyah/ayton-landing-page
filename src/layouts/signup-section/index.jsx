@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import SuccessSVG from 'assets/icons/icon-success.png'
 import TwitterGraySVG from 'assets/icons/icon-twitter-gray.svg'
 import LinkedInGraySVG from 'assets/icons/icon-linkedin-gray.svg'
-import FileSVG from 'assets/icons/file.png'
+import FileSVG from 'assets/icons/file.svg'
 import CloseGraySVG from 'assets/icons/icon-close-gray.svg'
 import Image from 'next/image'
 import { axiosApiInstance } from 'helpers/axios'
@@ -61,14 +61,14 @@ const SignupSection = () => {
     };
 
     return (
-        <div className='w-full bg-black bg-opacity-70 xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 lg:px-28 px-5 py-14'>
-            <p className='w-full lg:text-56 lg:leading-68 text-40 leading-48 font-bold text-white xl:px-32 text-center'>
+        <div className='w-full xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 lg:px-28 px-5 py-14'>
+            <p className='w-full lg:text-56 lg:leading-68 text-40 leading-48 font-bold xl:px-32 text-center'>
                 Register for a free business review and consultation
             </p>
             {
                 isSuccess ? (
                     <>
-                        <div className='w-full flex flex-col justify-center items-center bg-white rounded-3xl lg:px-56 lg:py-16 lg:gap-10 gap-4 p-6 md:p-12'>
+                        <div className='w-full flex flex-col justify-center items-center bg-primary-800 rounded-3xl lg:px-56 lg:py-16 lg:gap-10 gap-4 p-6 md:p-12'>
                             <div>
                                 <Image
                                     src={SuccessSVG}
@@ -84,7 +84,7 @@ const SignupSection = () => {
                                 </p>
                             </div>
                             <div className='w-full flex flex-col justify-start items-center gap-3'>
-                                <p className='w-full text-center font-bold text-sm'>
+                                <p className='w-full text-center font-bold text-sm text-primary-100'>
                                     Info@aytonventures.com
                                 </p>
                                 <div className='flex justify-center items-center gap-4'>
@@ -196,8 +196,8 @@ const SignupSection = () => {
                             errorMessage={error?.business_description}
                         />
                         <div className='w-full flex flex-col justify-start items-start gap-4 lg:mt-4'>
-                            <p className='font-normal text-16 leading-19 text-white'>
-                                Upload your company presentation <span className='text-white text-opacity-60'>(.pdf.docx.ppt)</span>
+                            <p className='font-normal text-16 leading-19 text-black'>
+                                Upload your company presentation <span className='text-black text-opacity-60'>(.pdf.docx.ppt)</span>
                             </p>
                             {
                                 values.file.length === 0 ? (
@@ -210,7 +210,7 @@ const SignupSection = () => {
                                         id='file'
                                         errorMessage={error?.file}
                                     >
-                                        <p className='text-white'>
+                                        <p className='text-black'>
                                             + Upload File
                                         </p>
                                     </InputUpload>
@@ -222,7 +222,7 @@ const SignupSection = () => {
                                                 alt='file'
                                             />
                                         </div>
-                                        <p className='text-white underline'>
+                                        <p className='underline'>
                                             {values.file[0].name}
                                         </p>
                                         <div
@@ -251,7 +251,7 @@ const SignupSection = () => {
                                 )
                             }
                         </div>
-                        <button className={`${loading && "disabled:bg-gray-300"} w-full py-4 px-6 text-center bg-white rounded-lg font-bold text-18 leading-19 font-inter lg:mt-0 mt-6`}
+                        <button className={`${loading && "disabled:bg-opacity-40"} w-full py-4 px-6 text-center bg-black text-white rounded-lg font-bold text-18 leading-19 font-inter lg:mt-0 mt-6`}
                             onClick={_handleSubmit}
                             disabled={loading}
                         >

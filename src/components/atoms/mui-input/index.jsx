@@ -11,7 +11,7 @@ const BaseInput = ({ type, name, placeholder, value, onChange, className, requir
                 // placeholder={placeholder}
                 onChange={onChange}
                 value={value}
-                className={`w-full py-4 bg-transparent focus:ring-0 focus:outline-none border-b-1 border-white border-opacity-40 text-16 leading-19 font-normal text-white placeholder-white rounded-none`}
+                className={`w-full py-4 bg-transparent text-black focus:ring-0 focus:outline-none border-b-1 border-black border-opacity-40 text-16 leading-19 font-normal rounded-none`}
                 // autoFocus
                 required
                 autoComplete='off'

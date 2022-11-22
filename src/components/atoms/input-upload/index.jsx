@@ -22,7 +22,7 @@ const InputUpload = (props) => {
 
     return (
         <>
-            <label htmlFor={id} className="py-3 px-4 rounded-lg bg-transparent border-white border-[1px] text-white cursor-pointer">
+            <label htmlFor={id} className="py-3 px-4 rounded-lg bg-transparent border-black border-[1px] text-black cursor-pointer">
                 <input
                     className="hidden"
                     type="file"
