@@ -4,18 +4,31 @@ const BaseInput = ({ type, name, placeholder, value, onChange, className, requir
 
     return (
         <div className={`${className} flex-flex-col gap-4 floating-label-group`}>
-            <input
-                type={type}
-                id={name}
-                name={name}
-                // placeholder={placeholder}
-                onChange={onChange}
-                value={value}
-                className={`w-full py-4 bg-transparent text-black focus:ring-0 focus:outline-none border-b-1 border-black border-opacity-40 text-16 leading-19 font-normal rounded-none`}
-                // autoFocus
-                required
-                autoComplete='off'
-            />
+            {
+                type === 'textarea' ? (
+                    <textarea
+                        type={type}
+                        id={name}
+                        name={name}
+                        onChange={onChange}
+                        value={value}
+                        className={`w-full py-4 bg-transparent text-black focus:ring-0 focus:outline-none border-b-1 border-black border-opacity-40 text-16 leading-19 font-normal rounded-none resize-none`}
+                        required
+                        autoComplete='off'
+                    />
+                ) : (
+                    <input
+                        type={type}
+                        id={name}
+                        name={name}
+                        onChange={onChange}
+                        value={value}
+                        className={`w-full py-4 bg-transparent text-black focus:ring-0 focus:outline-none border-b-1 border-black border-opacity-40 text-16 leading-19 font-normal rounded-none`}
+                        required
+                        autoComplete='off'
+                    />
+                )
+            }
             <label className="floating-label">{placeholder}</label>
             {
                 errorMessage && (

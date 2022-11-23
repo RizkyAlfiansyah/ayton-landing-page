@@ -62,7 +62,7 @@ const SignupSection = () => {
 
     return (
         <div className='w-full xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 lg:px-28 px-5 py-14'>
-            <p className='w-full lg:text-56 lg:leading-68 text-40 leading-48 font-bold xl:px-32 text-center'>
+            <p className='w-full lg:text-56 lg:leading-68 text-40 leading-48 font-bold xl:px-20 lg:px-8 text-center'>
                 Register for a free business review and consultation
             </p>
             {
@@ -106,7 +106,7 @@ const SignupSection = () => {
                         <div />
                     </>
                 ) : (
-                    <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-10 font-inter lg:px-5'>
+                    <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-10 font-inter lg:px-24'>
                         <div className='w-full flex lg:flex-row flex-col justify-between items-center gap-8'>
                             <BaseInput
                                 type='text'
@@ -186,7 +186,7 @@ const SignupSection = () => {
                             errorMessage={error?.capital_raised}
                         />
                         <BaseInput
-                            type='text'
+                            type='textarea'
                             name='business_description'
                             placeholder='Briefly describe your business, how do you make money'
                             className='w-full md:py-0 py-6'

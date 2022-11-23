@@ -43,6 +43,17 @@
     /* color: #fff; */
   }
 
+  .floating-label-group textarea:focus ~ .floating-label,
+  textarea:not(:focus):valid ~ .floating-label {
+    top: -15px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 12px;
+    line-height: 15px;
+    /* opacity: 60%; */
+    /* color: #fff; */
+  }
+
   .row {
     margin-top: 50px;
   }
