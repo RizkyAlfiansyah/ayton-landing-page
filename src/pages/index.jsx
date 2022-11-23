@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="w-screen h-screen overflow-x-hidden">
       <div className="w-full bg-register bg-cover bg-no-repeat bg-center">
-        <div className="w-full relative flex flex-col justify-center items-center bg-black bg-opacity-70 gap-3 lg:px-234 lg:py-338 py-268 px-5">
+        <div className="w-full relative flex flex-col justify-center items-center bg-black bg-opacity-70 gap-3 xl:px-48 lg:py-338 py-268 px-5">
           <Hero onClick={_handleClick} />
         </div>
       </div>

@@ -27,7 +27,7 @@ const index = () => {
             <div className='flex lg:flex-row flex-col justify-center items-center gap-5'>
                 {
                     data.map((item, index) => (
-                        <div className='lg:w-3/6 md:w-4/6 xl:h-474 flex flex-col justify-start items-center gap-10 py-14 px-6 bg-white cursor-pointer hover:bg-primary-700' key={index}>
+                        <div className='lg:w-3/6 md:w-4/6 lg:h-474 flex flex-col justify-start items-center gap-10 py-14 px-6 bg-white cursor-pointer hover:bg-primary-700' key={index}>
                             <div>
                                 <Image
                                     src={LogoBlackPNG}
