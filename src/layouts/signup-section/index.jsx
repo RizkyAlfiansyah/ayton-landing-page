@@ -61,7 +61,7 @@ const SignupSection = () => {
     };
 
     return (
-        <div className='w-full xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 lg:px-28 px-5 py-14'>
+        <div className='w-full xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 lg:px-20 px-5 py-14'>
             <p className='w-full lg:text-56 lg:leading-68 text-40 leading-48 font-bold xl:px-20 lg:px-8 text-center'>
                 Register for a free business review and consultation
             </p>
@@ -112,7 +112,7 @@ const SignupSection = () => {
                                 type='text'
                                 name='name'
                                 placeholder='Your Full Name'
-                                className='lg:w-3/12 w-full'
+                                className='lg:w-4/12 w-full'
                                 required
                                 value={values.full_name}
                                 onChange={(e) => setValues({ ...values, full_name: e.target.value })}
@@ -122,7 +122,7 @@ const SignupSection = () => {
                                 type='text'
                                 name='email'
                                 placeholder='Email'
-                                className='lg:w-9/12 w-full'
+                                className='lg:w-8/12 w-full'
                                 required
                                 value={values.email}
                                 onChange={(e) => setValues({ ...values, email: e.target.value })}
@@ -140,26 +140,28 @@ const SignupSection = () => {
                                 onChange={(e) => setValues({ ...values, company_name: e.target.value })}
                                 errorMessage={error?.company_name}
                             />
-                            <BaseInput
-                                type='text'
-                                name='website'
-                                placeholder='Company Website'
-                                className='lg:w-4/12 w-full'
-                                required
-                                value={values.company_website}
-                                onChange={(e) => setValues({ ...values, company_website: e.target.value })}
-                                errorMessage={error?.company_website}
-                            />
-                            <BaseInput
-                                type='number'
-                                name='employees'
-                                placeholder='Number of team members'
-                                className='lg:w-4/12 w-full'
-                                required
-                                value={values.number_of_employees}
-                                onChange={(e) => setValues({ ...values, number_of_employees: e.target.value })}
-                                errorMessage={error?.number_of_employees}
-                            />
+                            <div className='lg:w-8/12 w-full flex flex-col lg:flex-row gap-8'>
+                                <BaseInput
+                                    type='text'
+                                    name='website'
+                                    placeholder='Company Website'
+                                    className='lg:w-1/2 w-full'
+                                    required
+                                    value={values.company_website}
+                                    onChange={(e) => setValues({ ...values, company_website: e.target.value })}
+                                    errorMessage={error?.company_website}
+                                />
+                                <BaseInput
+                                    type='number'
+                                    name='employees'
+                                    placeholder='Number of team members'
+                                    className='lg:w-1/2 w-full'
+                                    required
+                                    value={values.number_of_employees}
+                                    onChange={(e) => setValues({ ...values, number_of_employees: e.target.value })}
+                                    errorMessage={error?.number_of_employees}
+                                />
+                            </div>
                         </div>
                         <div className='w-full flex lg:flex-row flex-col justify-start lg:items-center items-start lg:gap-14 gap-10'>
                             <RadioInput
