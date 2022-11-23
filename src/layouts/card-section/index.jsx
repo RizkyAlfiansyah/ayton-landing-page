@@ -20,8 +20,8 @@ const index = () => {
     ]
 
     return (
-        <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-start items-center xl:px-[141px] md:px-16 px-6 py-[115px] gap-[87px]'>
-            <p className='w-full text-white text-center text-56 leading-68 font-bold lg:px-32'>
+        <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-start items-center xl:px-[141px] md:px-16 px-4 lg:py-[115px] py-14 gap-[87px]'>
+            <p className='w-full text-white text-center text-38 leading-48 font-bold lg:px-32'>
                 Let us help you secure early-stage investment capital
             </p>
             <div className='flex lg:flex-row flex-col justify-center items-center gap-5'>

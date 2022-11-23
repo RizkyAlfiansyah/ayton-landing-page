@@ -62,7 +62,7 @@ const SignupSection = () => {
 
     return (
         <div className='w-full xl:px-80 flex flex-col lg:gap-24 gap-16 xl:py-32 md:px-36 lg:px-20 px-5 py-14'>
-            <p className='w-full lg:text-56 lg:leading-68 text-40 leading-48 font-bold xl:px-20 lg:px-8 text-center'>
+            <p className='w-full lg:text-56 lg:leading-68 text-38 leading-48 font-bold xl:px-20 lg:px-8 text-center'>
                 Register for a free business review and consultation
             </p>
             {

@@ -16,7 +16,7 @@ const SecondSection = () => {
             description: "We work with start-ups across all major industries",
         },
         {
-            id: "6-9 months",
+            id: "6-9 Months",
             description: "It takes on average 6-9 months to complete a Seed stage fundraise",
         },
 
@@ -24,7 +24,7 @@ const SecondSection = () => {
 
     return (
         <>
-            <div className='w-full flex flex-col lg:flex-row justify-start lg:items-start items-center lg:gap-8 gap-9'>
+            <div className='w-full flex flex-col lg:flex-row justify-start lg:items-start items-center lg:gap-8 gap-12'>
                 {
                     secondSectionData.map((data, index) => {
                         return (
