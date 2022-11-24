@@ -1,23 +1,37 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import IconPNG from "assets/images/single-logo.png"
 import LogoPNG from "assets/icons/logo.png"
 import CloseSVG from "assets/icons/icon-close.svg"
 import Image from 'next/image'
 
 const Navbar = ({ onClick }) => {
-    const [collapse, setCollapse] = useState(false)
+    const [collapse, setCollapse] = useState(false)// -> UP | DOWN | LEFT | RIGHT | null
 
     const navbarLinks = [
         "Fundraise",
         "About Us",
         "Contact Us",
     ]
+    const changeBG = () => {
+        console.log(window.scrollY)
+    }
+
+    const [clientWindowHeight, setClientWindowHeight] = useState("");
+
+    const handleScroll = () => {
+        setClientWindowHeight(window.scrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <>
-            <div className="hidden lg:flex w-full sticky top-0 justify-between items-center py-10 px-16 xl:px-32 bg-black z-50">
+            <div className={`hidden lg:flex w-full fixed top-0 justify-between items-center py-8 px-16 xl:px-32 ${clientWindowHeight < 700 ? "bg-transparent" : "bg-black"} z-50 scroll-auto`}>
                 <div>
-                    <Image src={LogoPNG} alt="logo" />
+                    <Image src={LogoPNG} alt="logo" width={414} height={40} />
                 </div>
                 <ul className="flex justify-start items-center gap-14">
                     {
@@ -31,7 +45,7 @@ const Navbar = ({ onClick }) => {
                     }
                 </ul>
             </div>
-            <div className="lg:hidden w-full fixed flex top-0 justify-between items-center py-2 px-6 bg-black z-50">
+            <div className={`lg:hidden w-full fixed flex top-0 justify-between items-center py-2 px-6 ${clientWindowHeight < 670 ? "bg-transparent" : "bg-black bg-opacity-80"} z-50`}>
                 <div>
                     {/* <Image src={IconPNG} alt="logo-sm" height={24} /> */}
                     <p className='font-source text-38 leading-56 text-white tracking-[.15em]'>AYTON</p>
@@ -45,7 +59,7 @@ const Navbar = ({ onClick }) => {
             {
                 collapse && (
                     <div
-                        className={`lg:hidden w-full absolute top-0 flex flex-col justify-start bg-primary-150 z-50`}>
+                        className={`lg:hidden w-full fixed top-0 flex flex-col justify-start bg-primary-150 z-50`}>
                         <div className='w-full flex justify-between p-5'>
                             <div>
                                 <Image src={IconPNG} alt="logo" />

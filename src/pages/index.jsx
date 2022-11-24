@@ -1,5 +1,5 @@
 import { CardSection, FooterSection, Hero, Navbar, SecondSection, SignUpSection } from "layouts";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const ref = useRef(null);
@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen h-screen overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Navbar onClick={_handleClick} />
       <div className="w-full xl:min-h-screen md:bg-register bg-register-mobile md:bg-cover bg-cover bg-no-repeat bg-center">
         <div className="w-full xl:h-screen relative flex flex-col justify-center items-center bg-black bg-opacity-70 xl:p-0 lg:py-338 py-268 px-5">

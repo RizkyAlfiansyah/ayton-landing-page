@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const FooterSection = () => {
     return (
-        <div className='m-auto flex flex-col gap-8 justify-start items-center font-source font-normal text-white text-16 leading-[24px]'>
+        <div className='m-auto flex flex-col gap-8 justify-start items-center font-normal text-white text-16 leading-[24px]'>
             <div className='hidden lg:flex'>
                 <Image
                     src={PartnersPNG}

@@ -20,15 +20,15 @@ const index = () => {
     ]
 
     return (
-        <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-start items-center xl:px-24 md:px-16 px-4 lg:py-[115px] py-14 gap-[87px]'>
-            <p className='2xl:w-8/12 w-full text-white text-center lg:text-56 lg:leading-68 text-40 leading-48 font-bold 2xl:px-32 xl:px-28 lg:px-16'>
+        <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-start items-center xl:px-24 md:px-0 px-4 lg:py-[115px] py-14 gap-[87px]'>
+            <p className='w-full text-white text-center xl:text-56 xl:leading-68 md:text-40 md:leading-48 text-24 leading-32 font-bold'>
                 Let us help you secure early-stage <br /> investment capital
             </p>
             <div className='flex lg:flex-row flex-col justify-center items-center gap-5'>
                 {
                     data.map((item, index) => (
-                        <div className='2xl:w-3/12 lg:w-full md:w-4/6 lg:h-474 flex flex-col justify-start items-center md:gap-8 gap-4 py-8 lg:px-4 md:px-6 px-2 bg-white' key={index}>
-                            <div>
+                        <div className='2xl:w-3/12 lg:w-full md:w-4/6 lg:h-474 flex flex-col justify-start items-center md:gap-8 gap-4 md:py-14 py-8 lg:px-4 md:px-6 px-2 bg-white' key={index}>
+                            <div className='mb-4'>
                                 <Image
                                     src={LogoBlackPNG}
                                     alt="logo-black"
@@ -37,7 +37,7 @@ const index = () => {
                             <p className='text-center md:text-38 md:leading-36 text-24 leading-32 font-bold'>
                                 {item.title}
                             </p>
-                            <p className='md:text-20 md:leading-26 text-18 leading-22 text-center font-normal'>
+                            <p className='md:text-20 md:leading-36 text-18 leading-22 text-center font-normal'>
                                 {item.desc}
                             </p>
                         </div>
