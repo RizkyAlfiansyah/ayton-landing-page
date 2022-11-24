@@ -21,8 +21,8 @@ const index = () => {
 
     return (
         <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-start items-center xl:px-24 md:px-16 px-4 lg:py-[115px] py-14 gap-[87px]'>
-            <p className='2xl:w-8/12 w-full text-white text-center lg:text-56 lg:leading-68 text-40 leading-48 font-bold 2xl:px-32 xl:px-28'>
-                Let us help you secure early-stage investment capital
+            <p className='2xl:w-8/12 w-full text-white text-center lg:text-56 lg:leading-68 text-40 leading-48 font-bold 2xl:px-32 xl:px-28 lg:px-16'>
+                Let us help you secure early-stage <br /> investment capital
             </p>
             <div className='flex lg:flex-row flex-col justify-center items-center gap-5'>
                 {

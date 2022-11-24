@@ -65,7 +65,7 @@ const SignupSection = () => {
     };
 
     return (
-        <div className='w-full xl:px-72 flex flex-col justify-center items-center lg:gap-24 gap-16 xl:py-32 md:px-28 lg:px-28 px-5 py-14'>
+        <div className='w-full xl:px-72 flex flex-col justify-center items-center lg:gap-24 gap-16 xl:py-32 md:px-28 lg:px-24 px-5 py-14'>
             <p className='2xl:w-8/12 w-full lg:text-56 lg:leading-68 text-38 leading-48 font-bold text-center'>
                 Register for a free business review and <br className='lg:flex hidden' /> fundraising consultation
             </p>
