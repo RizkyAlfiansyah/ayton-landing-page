@@ -21,7 +21,7 @@ export default function Home() {
     <div className="w-screen h-screen overflow-x-hidden">
       <Navbar onClick={_handleClick} />
       <div className="w-full xl:min-h-screen md:bg-register bg-register-mobile md:bg-cover bg-cover bg-no-repeat bg-center">
-        <div className="w-full xl:h-screen relative flex flex-col justify-center items-center bg-black bg-opacity-70 gap-3 xl:px-8 2xl:px-64 lg:py-338 py-338 px-5">
+        <div className="w-full xl:h-screen relative flex flex-col justify-center items-center bg-black bg-opacity-70 xl:p-0 lg:py-338 py-268 px-5">
           <Hero />
         </div>
       </div>

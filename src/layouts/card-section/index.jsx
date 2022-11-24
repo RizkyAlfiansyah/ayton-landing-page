@@ -27,17 +27,17 @@ const index = () => {
             <div className='flex lg:flex-row flex-col justify-center items-center gap-5'>
                 {
                     data.map((item, index) => (
-                        <div className='2xl:w-3/12 lg:w-full md:w-4/6 lg:h-474 flex flex-col justify-start items-center gap-8 py-8 lg:px-4 md:px-6 px-2 bg-white' key={index}>
+                        <div className='2xl:w-3/12 lg:w-full md:w-4/6 lg:h-474 flex flex-col justify-start items-center md:gap-8 gap-4 py-8 lg:px-4 md:px-6 px-2 bg-white' key={index}>
                             <div>
                                 <Image
                                     src={LogoBlackPNG}
                                     alt="logo-black"
                                 />
                             </div>
-                            <p className='text-center text-38 leading-36 font-bold'>
+                            <p className='text-center md:text-38 md:leading-36 text-24 leading-32 font-bold'>
                                 {item.title}
                             </p>
-                            <p className='text-20 leading-26 text-center font-normal'>
+                            <p className='md:text-20 md:leading-26 text-18 leading-22 text-center font-normal'>
                                 {item.desc}
                             </p>
                         </div>

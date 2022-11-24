@@ -65,14 +65,14 @@ const SignupSection = () => {
     };
 
     return (
-        <div className='w-full xl:px-80 flex flex-col justify-center items-center lg:gap-24 gap-16 xl:py-32 md:px-36 lg:px-24 px-5 py-14'>
-            <p className='2xl:w-8/12 w-full lg:text-56 lg:leading-68 text-38 leading-48 font-bold xl:px-16 lg:px-16 text-center'>
-                Register for a free business review and fundraising consultation
+        <div className='w-full xl:px-72 flex flex-col justify-center items-center lg:gap-24 gap-16 xl:py-32 md:px-28 lg:px-28 px-5 py-14'>
+            <p className='2xl:w-8/12 w-full lg:text-56 lg:leading-68 text-38 leading-48 font-bold text-center'>
+                Register for a free business review and <br className='lg:flex hidden' /> fundraising consultation
             </p>
             {
                 isSuccess ? (
                     <>
-                        <div className='w-full flex flex-col justify-center items-center bg-primary-800 rounded-3xl lg:px-56 lg:py-16 lg:gap-10 gap-4 p-6 md:p-12'>
+                        <div className='w-full flex flex-col justify-center items-center bg-primary-800 rounded-3xl lg:px-20 lg:py-16 lg:gap-10 gap-4 p-6 md:p-12'>
                             <div>
                                 <Image
                                     src={SuccessSVG}
@@ -110,7 +110,7 @@ const SignupSection = () => {
                         <div />
                     </>
                 ) : (
-                    <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-10 font-inter lg:px-20'>
+                    <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-10 font-inter lg:px-16'>
                         <BaseInput
                             type='text'
                             name='name'
