@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import IconPNG from "assets/icons/icon.png"
+import IconPNG from "assets/images/single-logo.png"
 import LogoPNG from "assets/icons/logo.png"
 import CloseSVG from "assets/icons/icon-close.svg"
 import Image from 'next/image'
@@ -8,14 +8,14 @@ const Navbar = ({ onClick }) => {
     const [collapse, setCollapse] = useState(false)
 
     const navbarLinks = [
-        "Home",
-        "Register",
+        "Fundraise",
+        "About Us",
         "Contact Us",
     ]
 
     return (
         <>
-            <div className="hidden lg:flex w-full absolute top-0 justify-between items-center py-10 px-24 xl:px-32 bg-transparent">
+            <div className="hidden lg:flex w-full sticky top-0 justify-between items-center py-10 px-16 xl:px-32 bg-black z-50">
                 <div>
                     <Image src={LogoPNG} alt="logo" />
                 </div>
@@ -31,9 +31,10 @@ const Navbar = ({ onClick }) => {
                     }
                 </ul>
             </div>
-            <div className="lg:hidden w-full absolute flex top-0 justify-between items-center py-5 px-6 bg-transparent">
+            <div className="lg:hidden w-full fixed flex top-0 justify-between items-center py-2 px-6 bg-black z-50">
                 <div>
-                    <Image src={IconPNG} alt="logo-sm" />
+                    {/* <Image src={IconPNG} alt="logo-sm" height={24} /> */}
+                    <p className='font-source text-38 leading-56 text-white tracking-[.15em]'>AYTON</p>
                 </div>
                 <div className='flex flex-col justify-center items-center p-[2px] gap-[6px]' onClick={() => setCollapse(true)}>
                     <div className='w-6 h-[2px] bg-white rounded-lg' />
@@ -44,7 +45,7 @@ const Navbar = ({ onClick }) => {
             {
                 collapse && (
                     <div
-                        className={`lg:hidden w-full absolute top-0 flex flex-col justify-start bg-primary-150`}>
+                        className={`lg:hidden w-full absolute top-0 flex flex-col justify-start bg-primary-150 z-50`}>
                         <div className='w-full flex justify-between p-5'>
                             <div>
                                 <Image src={IconPNG} alt="logo" />

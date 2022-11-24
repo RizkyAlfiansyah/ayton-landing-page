@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BaseInput = ({ type, name, placeholder, value, onChange, className, required = false, errorMessage = '' }) => {
+const BaseInput = ({ type, name, placeholder, value, onChange, className, required = false, errorMessage = '', optional = false }) => {
 
     return (
         <div className={`${className} flex-flex-col gap-4 floating-label-group`}>
@@ -29,7 +29,12 @@ const BaseInput = ({ type, name, placeholder, value, onChange, className, requir
                     />
                 )
             }
-            <label className="floating-label">{placeholder}</label>
+            <label className="floating-label">{placeholder} {
+                optional && (
+                    <span className='text-black text-opacity-40'> - optional</span>
+                )
+            }
+            </label>
             {
                 errorMessage && (
                     <p className='w-full text-start text-red-500 text-12 leading-4 mt-1'>

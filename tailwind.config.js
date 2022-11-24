@@ -83,6 +83,7 @@ module.exports = {
       backgroundImage: {
         "hero-bg": 'url("/bg-hero.png")',
         register: 'url("/bg-register.png")',
+        "register-mobile": 'url("/bg-register-mobile.png")',
       },
       transition: {
         fade: "all 0.2s ease",

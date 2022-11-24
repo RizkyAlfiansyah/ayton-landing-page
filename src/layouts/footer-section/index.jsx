@@ -23,7 +23,7 @@ const FooterSection = () => {
                     1 St Katherine’s Way, London, E1W 1 UN London, United Kingdom
                 </p>
                 <p className='w-[335px] text-center'>
-                    info@aytonventures.com
+                    info@aytoncapital.com
                 </p>
             </div>
             <div className='w-full flex justify-center items-center gap-4'>
