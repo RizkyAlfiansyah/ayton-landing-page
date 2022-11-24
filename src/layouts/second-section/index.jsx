@@ -4,19 +4,23 @@ const SecondSection = () => {
 
     const secondSectionData = [
         {
-            id: "£5M+ Raised",
+            id: "£5M+",
+            ids: "Raised",
             description: "We’ve raised over £5M in equity capital for UK based start-ups",
         },
         {
-            id: "Early Stage",
+            id: "Early",
+            ids: "Stage",
             description: "We work on fundraises from Seed stage to Series A",
         },
         {
-            id: "Sector Agnostic",
+            id: "Sector",
+            ids: "Agnostic",
             description: "We work with start-ups across all major industries",
         },
         {
-            id: "6-9 Months",
+            id: "6-9",
+            ids: "Months",
             description: "It takes on average 6-9 months to complete a Seed stage fundraise",
         },
 
@@ -28,13 +32,9 @@ const SecondSection = () => {
                 {
                     secondSectionData.map((data, index) => {
                         return (
-                            <div className='lg:w-full w-9/12 flex flex-col justify-start items-center lg:gap-8 2xl:gap-12 gap-3' key={index}>
-                                <p className='2xl:w-5/12 lg:w-6/12 lg:h-20 2xl:text-48 md:text-40 md:leading-48 text-32 leading-22 font-normal text-primary-600 text-center'>{data.id}</p>
-                                <div className='w-full h-full xl:px-8 2xl:px-20 flex flex-col justify-start items-center gap-10'>
-                                    <p className='md:w-10/12 lg:w-auto md:text-24 md:leading-32 text-20 leading-32 font-normal text-center text-primary-100'>
-                                        {data.description}
-                                    </p>
-                                </div>
+                            <div className='w-full flex flex-col gap-8 justify-center items-start'>
+                                <p className='w-full text-center text-primary-600 lg:text-40 lg:leading-56 text-38 leading-48 font-bold'>{data.id} <br /> {data.ids}</p>
+                                <p className='w-full text-center font-normal lg:text-20 lg:leading-36 text-primary-100 md:px-36 lg:px-0'>{data.description}</p>
                             </div>
                         )
                     })
