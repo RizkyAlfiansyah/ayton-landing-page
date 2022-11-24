@@ -29,7 +29,7 @@ const Navbar = ({ onClick }) => {
 
     return (
         <>
-            <div className={`hidden lg:flex w-full fixed top-0 justify-between items-center py-8 px-16 xl:px-32 ${clientWindowHeight < 700 ? "bg-transparent" : "bg-black"} z-50 scroll-auto`}>
+            <div className={`hidden lg:flex w-full fixed top-0 justify-between items-center py-8 px-16 xl:px-32 ${clientWindowHeight < 700 ? "bg-transparent" : "bg-black bg-opacity-80"} z-50 scroll-auto`}>
                 <div>
                     <Image src={LogoPNG} alt="logo" width={414} height={40} />
                 </div>
