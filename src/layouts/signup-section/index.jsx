@@ -65,14 +65,14 @@ const SignupSection = () => {
     };
 
     return (
-        <div className='w-full flex flex-col justify-center items-center lg:gap-24 gap-16 xl:py-32 md:px-3 lg:px-0 px-5 py-14'>
+        <div className='w-full flex flex-col justify-center items-center lg:gap-24 gap-16 xl:py-32 md:px-2 lg:px-0 px-5 py-14'>
             <p className='w-full xl:text-56 xl:leading-68 md:text-40 md:leading-48 text-24 leading-32 font-bold text-center'>
                 Register for a free business review and <br className='md:flex hidden' /> fundraising consultation
             </p>
             {
                 isSuccess ? (
                     <>
-                        <div className='w-full flex flex-col justify-center items-center bg-primary-800 rounded-3xl lg:px-20 lg:py-16 lg:gap-10 gap-4 p-6 md:p-12'>
+                        <div className='lg:w-6/12 md:w-10/12 flex flex-col justify-center items-center bg-primary-800 rounded-3xl lg:px-20 lg:py-16 lg:gap-10 gap-4 p-6 md:p-12'>
                             <div>
                                 <Image
                                     src={SuccessSVG}
@@ -80,10 +80,10 @@ const SignupSection = () => {
                                 />
                             </div>
                             <div className='w-full flex flex-col justify-start items-center gap-8'>
-                                <p className='w-full text-center font-bold text-32 leading-38'>
+                                <p className='w-full text-center font-bold md:text-32 md:leading-38 text-24 leading-26'>
                                     Your submission has been succesfully processed
                                 </p>
-                                <p className='w-full text-center font-bold text-16 leading-19 text-primary-180'>
+                                <p className='w-full text-center font-bold md:text-16 md:leading-19 text-primary-180'>
                                     We will contact you within 3-5 working days
                                 </p>
                             </div>
@@ -110,7 +110,7 @@ const SignupSection = () => {
                         <div />
                     </>
                 ) : (
-                    <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-10 font-inter xl:px-72 lg:px-48 md:px-20'>
+                    <div className='w-full flex flex-col justify-start items-center lg:gap-12 gap-10 font-inter xl:px-80 lg:px-48 md:px-32'>
                         <BaseInput
                             type='text'
                             name='name'
