@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: "Big Caslon";
+    src: url("/big-caslon.ttf") format("truetype");
+  }
+
   html {
     font-family: "Open Sans", sans-serif;
   }

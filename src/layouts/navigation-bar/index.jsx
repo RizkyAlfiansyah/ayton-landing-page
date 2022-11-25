@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import IconPNG from "assets/images/single-logo.png"
+import IconSVG from "assets/icons/icon.png"
 import LogoPNG from "assets/icons/logo.png"
 import CloseSVG from "assets/icons/icon-close.svg"
 import Image from 'next/image'
@@ -37,7 +38,7 @@ const Navbar = ({ onClick }) => {
                     {
                         navbarLinks.map((link, index) => {
                             return (
-                                <li key={index} className="text-22 leading-27 text-white font-normal cursor-pointer rounded-xl" onClick={() => onClick(link)}>
+                                <li key={index} className="text-18 leading-22 text-white font-normal cursor-pointer rounded-xl" onClick={() => onClick(link)}>
                                     {link}
                                 </li>
                             )
@@ -45,10 +46,10 @@ const Navbar = ({ onClick }) => {
                     }
                 </ul>
             </div>
-            <div className={`lg:hidden w-full fixed flex top-0 justify-between items-center py-2 px-6 ${clientWindowHeight < 670 ? "bg-transparent" : "bg-black bg-opacity-80"} z-50`}>
-                <div>
-                    {/* <Image src={IconPNG} alt="logo-sm" height={24} /> */}
-                    <p className='font-source text-38 leading-56 text-white tracking-[.15em]'>AYTON</p>
+            <div className={`lg:hidden w-full fixed flex top-0 justify-between items-center py-5 px-6 ${clientWindowHeight < 670 ? "bg-transparent" : "bg-black bg-opacity-80"} z-50`}>
+                <div className='flex gap-2 h-10 justify-start items-center'>
+                    <Image src={IconSVG} alt="logo-sm" width={50} height={40} />
+                    <p className='font-source text-32 leading-56 text-white tracking-[.15em]'>AYTON</p>
                 </div>
                 <div className='flex flex-col justify-center items-center p-[2px] gap-[6px]' onClick={() => setCollapse(true)}>
                     <div className='w-6 h-[2px] bg-white rounded-lg' />
@@ -62,7 +63,7 @@ const Navbar = ({ onClick }) => {
                         className={`lg:hidden w-full fixed top-0 flex flex-col justify-start bg-primary-150 z-50`}>
                         <div className='w-full flex justify-between p-5'>
                             <div>
-                                <Image src={IconPNG} alt="logo" />
+                                <Image src={IconSVG} alt="logo" />
                             </div>
                             <span className='font-bold text-white' onClick={() => setCollapse(false)}>
                                 <Image src={CloseSVG} alt="close" />

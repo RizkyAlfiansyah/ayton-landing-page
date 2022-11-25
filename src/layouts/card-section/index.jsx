@@ -21,7 +21,7 @@ const index = () => {
 
     return (
         <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-start items-center xl:px-24 md:px-0 px-4 lg:py-[115px] py-14 gap-[87px]'>
-            <p className='w-full text-white text-center xl:text-56 xl:leading-68 md:text-40 md:leading-48 text-24 leading-32 font-bold'>
+            <p className='w-full text-white text-center xl:text-56 xl:leading-78 md:text-40 md:leading-48 text-24 leading-32 font-bold font-caslon tracking-wide'>
                 Let us help you secure early-stage <br /> investment capital
             </p>
             <div className='flex lg:flex-row flex-col justify-center items-center gap-5 lg:px-4'>
@@ -34,7 +34,7 @@ const index = () => {
                                     alt="logo-black"
                                 />
                             </div>
-                            <p className='text-center md:text-38 md:leading-36 text-24 leading-32 font-bold'>
+                            <p className='text-center md:text-38 md:leading-36 text-24 leading-32 font-bold font-caslon tracking-wide'>
                                 {item.title}
                             </p>
                             <p className='md:text-20 md:leading-36 text-18 leading-22 text-center font-normal'>

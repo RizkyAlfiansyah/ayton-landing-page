@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         source: ["Source Serif Pro", "serif"],
+        caslon: ["Big Caslon", "serif"],
       },
       colors: {
         primary: {
