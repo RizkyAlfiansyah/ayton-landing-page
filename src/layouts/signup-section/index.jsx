@@ -203,7 +203,7 @@ const SignupSection = () => {
                         <BaseInput
                             type='text'
                             name='capital'
-                            placeholder='How much capital are you looking to raise*'
+                            placeholder='How much capital are you seeking*'
                             className='w-full'
                             required
                             value={values.capital_raised}

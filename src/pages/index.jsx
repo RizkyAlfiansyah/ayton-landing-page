@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 export default function Home() {
   const ref = useRef(null);
   const contacts = useRef(null);
+  const signup = useRef(null);
 
   const _handleClick = (value) => {
     if (value === "Fundraise") {
-      window.location.href = "/";
+      signup.current.scrollIntoView({ behavior: "smooth" });
     } else if (value === "About Us") {
       ref.current.scrollIntoView({ behavior: "smooth" });
     } else if (value === "Contact Us") {
@@ -31,7 +32,7 @@ export default function Home() {
       <div className="w-full flex-flex-col justify-center items-center bg-hero-bg bg-cover bg-no-repeat xl:p-0" ref={ref}>
         <CardSection />
       </div>
-      <div className="w-full flex-flex-col justify-center items-center xl:p-0">
+      <div className="w-full flex-flex-col justify-center items-center xl:p-0" ref={signup}>
         <SignUpSection />
       </div>
       <div className="w-full flex flex-col justify-start items-center lg:py-[72px] py-[50px] bg-black" ref={contacts}>

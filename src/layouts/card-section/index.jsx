@@ -34,10 +34,10 @@ const index = () => {
                                     alt="logo-black"
                                 />
                             </div>
-                            <p className='text-center md:text-38 md:leading-36 text-24 leading-32 font-bold font-caslon tracking-wide'>
+                            <p className='text-center md:text-38 md:leading-36 text-24 leading-32 font-bold font-caslon tracking-wide text-primary-600'>
                                 {item.title}
                             </p>
-                            <p className='md:text-20 md:leading-36 text-18 leading-22 text-center font-normal'>
+                            <p className='md:text-20 md:leading-36 text-18 leading-22 text-center font-normal text-primary-100'>
                                 {item.desc}
                             </p>
                         </div>

@@ -13,9 +13,6 @@ const Navbar = ({ onClick }) => {
         "About Us",
         "Contact Us",
     ]
-    const changeBG = () => {
-        console.log(window.scrollY)
-    }
 
     const [clientWindowHeight, setClientWindowHeight] = useState("");
 
