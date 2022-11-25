@@ -20,7 +20,7 @@ const index = () => {
     ]
 
     return (
-        <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-start items-center xl:px-24 md:px-0 px-4 lg:py-[115px] py-20 gap-[87px]'>
+        <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-start items-center xl:px-24 md:px-0 px-4 lg:py-[115px] py-24 md:gap-[87px] gap-16'>
             <p className='w-full text-white text-center xl:text-56 xl:leading-78 md:text-40 md:leading-48 text-24 leading-32 font-bold font-caslon tracking-wide'>
                 Let us help you secure early-stage <br /> investment capital
             </p>
