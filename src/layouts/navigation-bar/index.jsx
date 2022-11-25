@@ -28,7 +28,7 @@ const Navbar = ({ onClick }) => {
     return (
         <>
             <div className={`hidden lg:flex w-full fixed top-0 justify-between items-center py-8 px-16 xl:px-32 ${clientWindowHeight < 700 ? "bg-transparent" : "bg-black bg-opacity-80"} z-50 scroll-auto`}>
-                <div>
+                <div className='cursor-pointer'>
                     <Image src={LogoPNG} alt="logo" width={414} height={40} onClick={() => onClick("home")} />
                 </div>
                 <ul className="flex justify-start items-center gap-14">
@@ -47,7 +47,7 @@ const Navbar = ({ onClick }) => {
                 </ul>
             </div>
             <div className={`lg:hidden w-full fixed flex top-0 justify-between items-center py-5 px-6 ${clientWindowHeight < 670 ? "bg-transparent" : "bg-black bg-opacity-80"} z-50`}>
-                <div className='flex gap-2 h-10 justify-start items-center' onClick={() => onClick("home")}>
+                <div className='flex gap-2 h-10 justify-start items-center cursor-pointer' onClick={() => onClick("home")}>
                     <Image src={IconSVG} alt="logo-sm" width={50} height={40} />
                     <p className='font-source text-32 leading-56 text-white tracking-[.15em]'>AYTON</p>
                 </div>
@@ -62,7 +62,10 @@ const Navbar = ({ onClick }) => {
                     <div
                         className={`lg:hidden w-full fixed top-0 flex flex-col justify-start bg-primary-150 z-50`}>
                         <div className='w-full flex justify-between p-5'>
-                            <div>
+                            <div onClick={() => {
+                                setCollapse(false)
+                                onClick("home")
+                            }}>
                                 <Image src={IconSVG} alt="logo" />
                             </div>
                             <span className='font-bold text-white' onClick={() => setCollapse(false)}>
