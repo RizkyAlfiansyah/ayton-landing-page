@@ -12,7 +12,7 @@ const Document = () => {
                 <meta property="og:url" content="https://ayton.com/" />
                 <meta property="og:type" content="website" />
                 <meta property="fb:app_id" content="your fb id" />
-                <meta property="og:title" content="ayton" />
+                <meta property="og:title" content="Ayton capital partners" />
                 <meta name="twitter:card" content="summary" />
                 <meta
                     property="og:description"
