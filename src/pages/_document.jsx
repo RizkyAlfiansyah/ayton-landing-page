@@ -5,6 +5,23 @@ const Document = () => {
     return (
         <Html>
             <Head>
+                <meta property="og:image" content="https://i.postimg.cc/pLsD9P5J/thumb.png" />
+                <meta property="og:image:type" content="image/png" />
+                <meta property="og:image:width" content="200" />
+                <meta property="og:image:height" content="200" />
+                <meta property="og:url" content="https://ayton.com/" />
+                <meta property="og:type" content="website" />
+                <meta property="fb:app_id" content="your fb id" />
+                <meta property="og:title" content="ayton" />
+                <meta name="twitter:card" content="summary" />
+                <meta
+                    property="og:description"
+                    content="Let us help you secure early-stage investment capital"
+                />
+                <meta name="twitter:site" content="@coachcube" />
+                <meta name="twitter:url" content="https://ayton.com/" />
+                <meta name="twitter:title" content="Ayton capital partners" />
+                <meta name="twitter:description" content="Let us help you secure early-stage investment capital" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link rel="icon" href="/icon.png" />
