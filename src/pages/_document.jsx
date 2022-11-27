@@ -12,7 +12,7 @@ const Document = () => {
                 <meta property="og:url" content="https://ayton.com/" />
                 <meta property="og:type" content="website" />
                 <meta property="fb:app_id" content="your fb id" />
-                <meta property="og:title" content="Ayton capital partners" />
+                <meta property="og:title" content="Ayton Capital Partners" />
                 <meta name="twitter:card" content="summary" />
                 <meta
                     property="og:description"
@@ -20,7 +20,7 @@ const Document = () => {
                 />
                 <meta name="twitter:site" content="@coachcube" />
                 <meta name="twitter:url" content="https://ayton.com/" />
-                <meta name="twitter:title" content="Ayton capital partners" />
+                <meta name="twitter:title" content="Ayton Capital Partners" />
                 <meta name="twitter:description" content="Let us help you secure early-stage investment capital" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
