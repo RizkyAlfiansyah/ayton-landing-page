@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "https://ayton.api-dc-tracker.my.id/api/:path*",
+        destination: "https://be.aytoncapital.com/api/:path*",
       },
     ];
   },
