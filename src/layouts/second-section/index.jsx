@@ -37,7 +37,7 @@ const SecondSection = () => {
                     secondSectionData.map((data, index) => {
                         return (
                             <div className='w-full flex flex-col md:gap-8 gap-6 justify-center items-center' key={index}>
-                                <p className='w-full text-center text-primary-600 xl:text-40 xl:leading-56 md:text-38 md:leading-48 text-32 leading-38 font-normal'>{data.id} <br /> {data.ids}</p>
+                                <p className='w-full text-center text-primary-600 xl:text-38 xl:leading-48 md:text-32 md:leading-48 text-32 leading-38 font-normal'>{data.id} <br /> {data.ids}</p>
                                 <p className='xl:w-64 lg:w-full w-56 text-center font-normal xl:text-20 xl:leading-36 text-18 leading-27 text-primary-100 md:px-0 lg:px-0'>{data.description} <br /> {data.desc}</p>
                             </div>
                         )

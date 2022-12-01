@@ -13,7 +13,7 @@ const Hero = ({ onClick }) => {
                 <br />
                 building your business
             </p>
-            <div className="md:hidden sm:w-auto xl:text-56 xl:leading-78 tracking-wider md:text-40 md:leading-48 text-32 leading-40 text-center md:font-medium font-caslon font-normal lg:p-0 text-white 2xl:mt-12 mt-24 bg-black bg-opacity-40 rounded-lg p-4">
+            <div className="md:hidden sm:w-auto xl:text-56 xl:leading-78 tracking-wider md:text-40 md:leading-48 text-32 leading-40 text-center md:font-medium font-caslon font-normal lg:p-0 text-white 2xl:mt-12 mt-24 bg-black bg-opacity-40 border-[0.5px] border-white p-4">
                 <p>
                     We focus on <br /> fundraising so
                     <br className='lg:hidden' />
