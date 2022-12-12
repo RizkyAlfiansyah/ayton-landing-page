@@ -16,12 +16,12 @@ const Document = () => {
                 <meta name="twitter:card" content="summary" />
                 <meta
                     property="og:description"
-                    content="Let us help you secure early-stage investment capital"
+                    content="Sylvester Lewis, Managing Director at aytoncapital.com"
                 />
                 <meta name="twitter:site" content="@coachcube" />
                 <meta name="twitter:url" content="https://aytoncapital.com/" />
                 <meta name="twitter:title" content="Ayton Capital Partners" />
-                <meta name="twitter:description" content="Let us help you secure early-stage investment capital" />
+                <meta name="twitter:description" content="Sylvester Lewis, Managing Director at aytoncapital.com" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link rel="icon" href="/icon.png" />
