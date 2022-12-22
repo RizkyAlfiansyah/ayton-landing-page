@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
     return (
       <>
         <Head>
-          <title>Ayton Capital Partners</title>
+          <title>AytonCapitalPartners</title>
           <meta charSet="UTF-8" />
           <meta name="description" content="Ayton Ventures" />
           <meta name="og:title" property="og:title" content="Ayton Ventures" />
